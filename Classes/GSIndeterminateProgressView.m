@@ -60,7 +60,7 @@ const CGFloat CHUNK_WIDTH = 80.0f;
 
         [self addSubview:v];
 
-        [self animateProgressChunk:v delay:(delay += 0.25)];
+        [self animateProgressChunk:v delay:(delay += 0.4)];
     }
 }
 
