@@ -8,7 +8,7 @@
 
 #import "GSIndeterminateProgressView.h"
 
-const CGFloat CHUNK_WIDTH = 36.0f;
+const CGFloat CHUNK_WIDTH = 80.0f;
 
 @implementation GSIndeterminateProgressView
 
@@ -80,7 +80,7 @@ const CGFloat CHUNK_WIDTH = 36.0f;
 
 - (void)animateProgressChunk:(UIView *)chunk delay:(NSTimeInterval)delay
 {
-    [UIView animateWithDuration:0.75 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1.7 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGRect chuckFrame = chunk.frame;
         chuckFrame.origin.x = self.frame.size.width;
         chunk.frame = chuckFrame;
@@ -89,7 +89,7 @@ const CGFloat CHUNK_WIDTH = 36.0f;
         chuckFrame.origin.x = -CHUNK_WIDTH;
         chunk.frame = chuckFrame;
         if (finished)
-            [self animateProgressChunk:chunk delay:0.4];
+            [self animateProgressChunk:chunk delay:0.01];
     }];
 }
 
